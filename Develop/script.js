@@ -1,5 +1,5 @@
 // Assignment Code - gary gave some starter code in JS
-
+//generating password 
 function generatePassword() {
   var numCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -7,7 +7,7 @@ function generatePassword() {
   var specialCharacters = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
   var possibleCharacters = [];
 
-  // prompt questions for password
+  // prompt questions & validate
   numberOfCharacters = prompt("How many characters do you want in your password? Choose between 8-128 characters.");
   if (numberOfCharacters < 8 || numberOfCharacters > 128) {
     return "Please choose a valid number of characters.";
@@ -79,10 +79,9 @@ function generatePassword() {
   return finalPassword;
 };
 
-// Get references to #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to #password input
+// Write password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
